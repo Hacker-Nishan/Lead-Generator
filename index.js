@@ -7,18 +7,17 @@ const ulEl = document.getElementById("ul-el")
 inputBtn.addEventListener("click",function(){
 
     myLeads.push(inputEl.value)
-    
-    renderLead()
+    ulEl.innerHTML += `<li><a target="_blank" href="#${inputEl.value}"> ${inputEl.value} </a></li>`
     inputEl.value=""
     console.log(myLeads)
     
 })
 
-function renderLead(){
-    let listItem = "<li>" + inputEl.value + "</li>"
-    ulEl.innerHTML += listItem;
+// function renderLead(){
+//     let listItem = "<li>" + inputEl.value + "</li>"
+//     ulEl.innerHTML += listItem;
     
-}
+// }
 
 // function renderLeads(){
 //     //create element
